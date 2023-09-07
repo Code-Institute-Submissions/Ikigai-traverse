@@ -16,27 +16,13 @@
     <div id="header"></div>
 
     <!-- Content -->
-    <div id="main-content" style="background-image: url('../../assets/images/magenta-nature-mystical-landscape.jpg')">
+    <main id="main-content" style="background-image: url('../../assets/images/magenta-nature-mystical-landscape.jpg')">
 
         <div id="dynamic-content">
-            <h2>Visual Puzzle - Arrange the Images</h2>
-            <p>Drag and drop the images to arrange them in the desired order:</p>
+            <h2>Find what you are good at</h2>
+            <p>Drag and drop the job images according to your skills and preferences.</p>
 
             <div id="image-grid" class="d-grid grid-cols-4 gap-3">
-                <!-- images for the grid -->
-                <div class="image-item" draggable="true"><img src="../../assets/images/building.jpg" alt="building"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/cooking.jpg" alt="cooking"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/crafting.jpg" alt="crafting"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/design.jpg" alt="design"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/e-book-layout-design-draft-graphic.jpg" alt="graphic design"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/fourniture_assembly+.jpg" alt="fourniture assembly"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/management.jpg" alt="management"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/music.jpg" alt="music"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/painting.jpg" alt="painting"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/puzzle.jpg" alt="puzzle"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/sport_playing.jpg" alt="sports playings"></div>
-                <div class="image-item" draggable="true"><img src="../../assets/images/voulanteers.jpg" alt="helping others"></div>
-
             </div>
 
             <!-- Button to open the reflection modal -->
@@ -45,7 +31,7 @@
             </div>
         </div>
 
-    </div>
+    </main>
 
     <!-- Reflection Modal -->
     <div class="modal fade" id="reflectionModal" tabindex="-1" aria-labelledby="reflectionModalLabel"
@@ -60,7 +46,7 @@
                     <p>Reflect on your image arrangement:</p>
                     <label for="question1">Which professions did you place in positions that reflect your strengths and skills?</label>
                     <textarea id="question1" rows="4"></textarea>
-                    <label for="question2">Did you notice any common threads or qualities among the professions you arranged in specific positions?</label>
+                    <label for="question2">Did you notice any common qualities among the professions you arranged in specific positions?</label>
                     <textarea id="question2" rows="4"></textarea>
                     <label for="question3">Did arranging these images give you any insights into your interests and potential career paths?</label>
                     <textarea id="question3" rows="4"></textarea>
@@ -72,7 +58,30 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div id="modal-go-to-vocation" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">
+                        Ready for finding your vocation?</h4>
+                    <button type="button" class="close" data-bs-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <p><img src="../../assets/images/6489590.jpg" alt="Character" class="modal-image"></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button id="button-continue" type="button" class="btn btn-primary" data-bs-dismiss="modal">Continue</button>
+                    <button id="button-exit" type="button" class="btn btn-default" data-bs-dismiss="modal">Exit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

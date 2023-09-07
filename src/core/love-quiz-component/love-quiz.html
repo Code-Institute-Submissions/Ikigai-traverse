@@ -15,10 +15,10 @@
     <div id="header"></div>
 
     <!-- Content -->
-    <div id="main-content" style="background-image: url('../../assets/images/magenta-nature-mystical-landscape.jpg')">
+    <main id="main-content" style="background-image: url('../../assets/images/magenta-nature-mystical-landscape.jpg')">
 
         <div id="dynamic-content">
-            <h2>Love Quiz</h2>
+            <h2>Find What do you Love Quiz</h2>
             <div id="content-area">
                 <div class="image-box">
                 </div>
@@ -48,25 +48,27 @@
 
                         </div>
                     </div>
-                    <div class="question-container" id="last-question-container" style="display: none;">
+                    <div class="question-container" id="question4-container" style="display: none;">
                         <label for="question4" class="form-label" hidden>Last Question</label>
-                        <input type="text" class="form-control" id="question4"
-                            placeholder="What activity makes you lose track of time?">
-                        <div class="submit-button-container">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
+                        <input type="text" class="form-control" id="question4" placeholder="What activity makes you lose track of time?">
+
                     </div>
                 </form>
+                <div id="conditionalElement" class="button-reflect">
+                    <!-- Button to open the reflection modal -->
+                    <button id="open-reflection-modal" class="btn btn-primary">Open Reflection</button>
+                </div>
             </div>
 
         </div>
-    </div>
+
+    </main>
 
     <!-- Footer -->
     <div id="footer"></div>
 
     <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="modal-go-mission" class="modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
 
             <!-- Modal content-->
@@ -75,18 +77,48 @@
 
                     <h4 class="modal-title">
                         Ready for finding your mission?</h4>
-                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">×</button>
                 </div>
                 <div class="modal-body">
                     <p><img src="../../assets/images/6489590.jpg" alt="Character" class="modal-image"></p>
 
                 </div>
                 <div class="modal-footer">
-                    <button id="button-continue" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
-                    <button id="button-exit" type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+                    <button id="button-continue" type="button" class="btn btn-primary" data-bs-dismiss="modal">Continue</button>
+                    <button id="button-exit" type="button" class="btn btn-default" data-bs-dismiss="modal">Exit</button>
                 </div>
             </div>
 
+        </div>
+    </div>
+
+        <!-- Reflection Modal -->
+        <div class="modal fade" id="reflectionModal" tabindex="-1" aria-labelledby="reflectionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reflectionModalLabel">Reflection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Take a moment to reflect on your choices and their impact:</p>
+                    <label for="question1">Reflecting on your childhood answer, do you still find joy in that activity today? If not, what changed?</label>
+                    <textarea id="question1" rows="4"></textarea>
+                    <label for="question2">Thinking about the activities that make time fly for you, why do you think you become so engrossed in them?</label>
+                    <textarea id="question2" rows="4"></textarea>
+                    <label for="question3">Do you believe it's important to have a career or job that aligns with these passions? Why or why not?</label>
+                    <textarea id="question3" rows="4"></textarea>
+                    <label for="question4">How does engaging in your favorite leisure activities impact your mental and emotional well-being?</label>
+                    <textarea id="question4" rows="4"></textarea>
+                    <label for="question5">Based on your answers, do you feel you're living authentically, in alignment with your true passions and interests?</label>
+                    <textarea id="question5" rows="4"></textarea>
+    
+                </div>
+                <div class="modal-footer">
+                    <button id="submit-reflection" class="btn btn-primary"  data-bs-dismiss="modal">Submit Reflection</button>
+                </div>
+            </div>
         </div>
     </div>
 
