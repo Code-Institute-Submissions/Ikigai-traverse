@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
 }
 
 #header {
@@ -21,14 +22,40 @@ header {
     width: 100%;
 }
 
-h2,h3,h4{
+h2,
+h3,
+h4 {
     text-align: center;
 }
-.modal-title, h2, h4, h3{
+
+.modal-title,
+h2,
+h4,
+h3 {
     font-family: monospace !important;
 }
 
-#box-info p ul li {
+.modal {
+    background-color: rgb(255 192 203 / 71%);
+}
+
+.box-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.box-info p {
+    text-align: justify;
+    margin: 0;
+    /* Reset default margin for paragraphs */
+}
+
+.box-info,
+ul,
+li {
     font-family: 'Kosugi Maru', sans-serif;
 }
 
@@ -39,11 +66,13 @@ footer {
     z-index: 1000;
 
 }
+
 p {
     font-family: 'Kosugi Maru', sans-serif;
 }
+
 #main-content {
-    width: 70%;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -54,12 +83,13 @@ p {
 }
 
 #dynamic-content {
-    background-color: rgba(255, 255, 255, 0.8); /* This will make the background slightly transparent */
+    /* This will make the background slightly transparent */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
 }
 
-.btn-discover-box{
+.btn-discover-box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,24 +98,32 @@ p {
     justify-content: flex-end;
     margin-top: 0.5rem;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1.5rem;
 }
 
-.btn-primary{
-    --bs-btn-bg: #d63384;
-    --bs-btn-hover-bg: #0d6efd40;
-}
-#text-content {
-    display: none;
+.btn-primary {
+    --bs-btn-bg: #d63384 !important;
+    --bs-btn-hover-bg: #0d6efd40 !important;
+    background-color: #d63384;
 }
 
-#footer {
-    width: 100%;
+#text-content {
+    display: none;
 }
 
 footer {
     position: fixed;
     bottom: 0;
+    width: 100%;
+}
+
+#footer {
     width: 100%;
 }
