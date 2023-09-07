@@ -1,0 +1,78 @@
+h2 {
+    text-align: center;
+}
+
+/* Add custom styling for the image grid */
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    /* the gap between images */
+    margin-top: 20px;
+}
+
+/* Style for individual image items */
+.image-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    cursor: pointer;
+    min-height: 160px;
+    max-height: 160px;
+}
+
+.image-item img {
+    max-width: 50%;
+    max-height: 100%;
+}
+
+/* Add space at the bottom of the image items */
+.image-item:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+/* Apply styles when dragging an image */
+.dragging {
+    opacity: 0.5;
+    border: 2px dashed #aaa;
+    background-color: white;
+}
+
+.ghost {
+    background-color: lightgray;
+    /* Customize the ghost element's appearance */
+    opacity: 0.5;
+}
+
+.button-reflect {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-end;
+}
+
+textarea{
+    width: 465px;
+}
+
+label{
+    display: grid;
+    align-content: space-between;
+    justify-content: center;
+    align-items: baseline;
+    justify-items: center;
+}
+
+span{
+    font-weight:bold
+}
+
+.modal {
+    background-color: rgb(255 192 203 / 71%);
+}
