@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikigai Traverse Game - Mission Game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="mission-game.css">
+
+</head>
+
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Content -->
+    <div id="main-content" style="background-image: url('../../assets/images/magenta-nature-mystical-landscape.jpg')">
+
+        <div id="dynamic-content">
+            <h2>Impactful Actions Game</h2>
+
+            <div id="columns-container" class="d-flex justify-content-between">
+                <div id="most-impactful" class="column">
+                    <h3>Most Impactful</h3>
+                    <div class="list"></div>
+                </div>
+                <div id="somewhat-impactful" class="column">
+                    <h3>Somewhat Impactful</h3>
+                    <div class="list"></div>
+                </div>
+                <div id="least-impactful" class="column">
+                    <h3>Least Impactful</h3>
+                    <div class="list"></div>
+                </div>
+            </div>
+            <div id="actions-container" class="d-flex justify-content-center mt-4">
+            </div>
+            <div class="button-reflect">
+                <!-- Button to open the reflection modal -->
+                <button id="open-reflection-modal" class="btn btn-primary">Open Reflection</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+
+    <!-- Reflection Modal -->
+    <div class="modal fade" id="reflectionModal" tabindex="-1" aria-labelledby="reflectionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reflectionModalLabel">Reflection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Take a moment to reflect on your choices and their impact:</p>
+                    <label for="question1">What factors influenced your decision to place the following actions in the 'Most Impactful' category : <span id="somewhat-actions"></span></label>
+                    <textarea id="question1" rows="4"></textarea>
+                    <label for="question2">What factors influenced your decision to place the following actions in the 'Somewhat Impactful' category : <span id="most-impactful-actions"></span></label>
+                    <textarea id="question2" rows="4"></textarea>
+                    <label for="question3">What factors influenced your decision to place the following actions in the 'Somewhat Impactful' category : <span id="least-impactful-actions"></span></label>
+                    <textarea id="question3" rows="4"></textarea>
+    
+                </div>
+                <div class="modal-footer">
+                    <button id="submit-reflection" class="btn btn-primary">Submit Reflection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal-go-profession" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">
+                        Ready for finding your profession?</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <p><img src="../../assets/images/6489590.jpg" alt="Character" class="modal-image"></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button id="button-continue" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
+                    <button id="button-exit" type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("../../shared/header.html");
+            $("#footer").load("../../shared/footer.html");
+        });
+    </script>
+    <script type="module" src="mission-game.js"></script>
+    <script type="module" src="actions.js"></script>
+
+</body>
+
+</html>

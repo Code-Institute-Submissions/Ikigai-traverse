@@ -1,0 +1,88 @@
+#columns-container {
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.column {
+    width: 30%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+#actions-container {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.action {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-family: cursive;
+}
+
+/* Apply to the elements that should not be selected during drag */
+.action[draggable="true"] {
+    user-select: none;
+}
+
+.list {
+    border: 2px solid #d5b2d2;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.placeholder {
+    background-color: white;
+    border: 2px dashed #aaa;
+    min-height: 50px;
+    margin-bottom: 10px;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+.button-reflect{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-end;
+}
+
+textarea{
+    width: 465px;
+}
+
+label{
+    display: grid;
+    align-content: space-between;
+    justify-content: center;
+    align-items: baseline;
+    justify-items: center;
+}
+
+span{
+    font-weight:bold
+}
+
+.modal {
+    background-color: rgb(255 192 203 / 71%);
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+}
