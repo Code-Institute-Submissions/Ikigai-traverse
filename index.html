@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikigai Traverse Game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Content -->
+    <div id="main-content" style="background-image: url('src/assets/images/magenta-nature-mystical-landscape.jpg')">
+        <div id="dynamic-content">
+            <h2>Find your IKIGAI</h2>
+            <p class="m-0">
+                "iki" (生き) : "Life,"
+                "gai" (甲斐): "Worth.
+            </p>
+            <div class="btn-discover-box">
+                <button id="discover-button" type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#info-modal">Discover More</button>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Modal -->
+    <div id="modal"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+          $("#header").load("src/shared/header.html"); 
+          $("#footer").load("src/shared/footer.html"); 
+          $("#modal").load("modal.html"); 
+        });
+    </script>
+    <script src="src/scripts.js"></script>
+</body>
+</html>
