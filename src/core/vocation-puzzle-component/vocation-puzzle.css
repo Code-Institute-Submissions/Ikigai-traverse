@@ -1,0 +1,101 @@
+.card {
+    box-sizing: border-box;
+    width: calc(14% - 10px);
+    height: 18vh;
+    margin: 5px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #8b008b8f;
+}
+
+.card.flipped {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    font-family: cursive;
+    justify-content: center;
+    text-align: center;
+}
+
+#game-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-stats {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: end;
+    justify-content: flex-end;
+    align-items: end;
+    color: var(--bs-danger);
+}
+
+.congrats-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: #ffd700;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+#toastSuccess {
+    background-color: #9ec5fe;
+    border: 1px solid #ffd700;
+}
+
+.button-reflect {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-end;
+}
+
+textarea {
+    width: 465px;
+}
+
+label {
+    display: grid;
+    align-content: space-between;
+    justify-content: center;
+    align-items: baseline;
+    justify-items: center;
+}
+
+span {
+    font-weight: bold
+}
+
+.modal {
+    background-color: rgb(255 192 203 / 71%);
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(38% - 10px);
+        height: calc(54% - 10px) !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: calc(100% - 10px);
+    }
+}
