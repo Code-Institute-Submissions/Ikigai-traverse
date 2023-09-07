@@ -7,7 +7,7 @@ const selectedActions = {
 document.addEventListener("DOMContentLoaded", function () {
     const actionsContainer = document.getElementById("actions-container");
     const columns = document.querySelectorAll(".list");
-    const refelectionButton= document.getElementById("submit-reflection");
+    const reflectionButton= document.getElementById("submit-reflection");
 
     ACTIONS.forEach((actionText) => {
         const action = document.createElement("div");
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         reflectionModal.show();
     });
 
-    refelectionButton.addEventListener('click', (event) => {
+    reflectionButton.addEventListener('click', () => {
         $("#modal-go-profession").modal('show')
     });
 });
