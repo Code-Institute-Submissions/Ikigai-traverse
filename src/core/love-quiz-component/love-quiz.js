@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loveQuiz = document.getElementById('love-quiz');
     const questionContainers = document.querySelectorAll('.question-container');
     const nextQuestionButtons = document.querySelectorAll('.next-question');
     const answers = [];
