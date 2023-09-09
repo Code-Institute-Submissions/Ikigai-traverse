@@ -10,7 +10,7 @@ let cards = [
     { attribute: 'Coach', shared_id: 5 },
     { attribute: '€35,000', shared_id: 5 },
     { attribute: 'Manager', shared_id: 6 },
-    { attribute: '€45,000 ', shared_id: 6 },
+    { attribute: '€43,000 ', shared_id: 6 },
 ];
 
 let flippedCards = [];
