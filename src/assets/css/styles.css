@@ -21,7 +21,7 @@ body {
 
 /* Style for the main content container */
 #main-content {
-    background-image: url('../../assets/images/magenta-nature-mystical-landscape.jpg');
+    background-image: url('../../assets/images/magenta-nature-mystical-landscape.webp');
     /* Background image */
     display: flex;
     /* Use flexbox for layout */
