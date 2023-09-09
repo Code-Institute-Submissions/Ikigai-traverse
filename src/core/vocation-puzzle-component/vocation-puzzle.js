@@ -124,4 +124,22 @@ openModalButton.addEventListener("click", () => {
     reflectionModal.show();
 });
 
+// Trigger the completion popup when the user completes the game and reflection
+function showCompletionPopup() {
+    const completionPopup = new bootstrap.Modal(document.getElementById("completion-popup"));
+    completionPopup.show();
+}
+
+// Trigger the popup when the user clicks the submit button
+document.getElementById('submit-reflection').addEventListener('click', function () {
+    // Assuming this is where you want to show the popup
+    showCompletionPopup();
+});
+
+// Add an event listener to the "Exit the game" button
+const exitButton = document.querySelector('.modal-footer .btn-secondary');
+exitButton.addEventListener('click', function () {
+    // Redirect the user to the home page
+    window.location.href = '/';
+});
 
