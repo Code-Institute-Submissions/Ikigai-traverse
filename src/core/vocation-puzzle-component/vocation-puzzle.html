@@ -47,24 +47,48 @@
 
     <!-- Reflection Modal -->
     <div class="modal fade" id="reflectionModal" tabindex="-1" aria-labelledby="reflectionModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="reflectionModalLabel">Reflection</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Take a moment to reflect on your choices and their impact:</p>
-                </div>
-                <div class="modal-footer">
-                    <button id="submit-reflection" class="btn btn-primary">Submit Reflection</button>
-                </div>
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reflectionModalLabel">Reflection</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Reflect on Your Game Experience: Career and Earnings:</p>
+                <label for="question1">What was your strategy for matching the vocation with its corresponding salary?</label>
+                <textarea id="question1" rows="4"></textarea>
+                <label for="question2">How did you approach the game when it started, and how did your strategy evolve as you played?</label>
+                <textarea id="question2" rows="4"></textarea>
+                <label for="question3">How might the insights gained from this game influence your real-life career decisions?</label>
+                <textarea id="question3" rows="4"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Exit the game</button>
+                <button id="submit-reflection" class="btn btn-primary">Submit Reflection</button>
             </div>
         </div>
     </div>
+</div>
 
     <div id="footer"></div>
+
+    <!-- Message Popup -->
+<div id="completion-popup" class="modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Congratulations!</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Congratulations on Completing Your IKIGAI Game and Reflection! 🎉</p>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Toast Success Notification -->
     <div class="position-fixed top-0 end-0 p-3" style="z-index: 11000">
