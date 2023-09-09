@@ -1,3 +1,4 @@
+// Define an array of cards with attributes and shared IDs
 let cards = [
     { attribute: 'Teacher', shared_id: 1 },
     { attribute: '€45,000', shared_id: 1 },
@@ -13,11 +14,13 @@ let cards = [
     { attribute: '€43,000 ', shared_id: 6 },
 ];
 
+// Initialize arrays and variables for game logic
 let flippedCards = [];
 let totalFlippedCards = 0;
 let score = 0;
 let startTime;
 
+// Shuffle the elements of an array randomly
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
     while (currentIndex !== 0) {
@@ -28,6 +31,7 @@ function shuffle(array) {
     return array;
 }
 
+// Handle card click event
 function cardClicked(cardElement, cardData) {
     if (flippedCards.length >= 2 || cardElement.classList.contains('flipped')) {
         return;
@@ -64,6 +68,7 @@ function cardClicked(cardElement, cardData) {
     }
 }
 
+// Initialize timer and game board
 let timerInterval;
 function startTimer() {
     startTime = new Date();
@@ -76,10 +81,12 @@ function startTimer() {
     }, 1000);
 }
 
+// Stop the timer
 function stopTimer() {
     clearInterval(timerInterval);
 }
 
+// Initialize the game board with shuffled cards
 function initializeGame() {
     const gameBoard = document.getElementById('game-board');
     shuffle(cards); // Shuffle the cards before displaying
@@ -103,6 +110,7 @@ function initializeGame() {
     startTimer();
 }
 
+// Initialize the game when the window is fully loaded
 window.onload = function () {
     initializeGame();
 };

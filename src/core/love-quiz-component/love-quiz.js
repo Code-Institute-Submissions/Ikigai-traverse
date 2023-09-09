@@ -1,18 +1,26 @@
+/**
+ * Execute code when the DOM content is fully loaded.
+ */
 document.addEventListener('DOMContentLoaded', () => {
+    // Get all question containers and next question buttons
     const questionContainers = document.querySelectorAll('.question-container');
     const nextQuestionButtons = document.querySelectorAll('.next-question');
     const answers = [];
 
+    // Add event listeners to next question buttons
     nextQuestionButtons.forEach((button, index) => {
         button.addEventListener('click', (event) => {
             event.preventDefault();
+            // Get the user's answer from the input field
             const answer = questionContainers[index].querySelector('input').value;
             answers.push(answer);
+            // Hide the current question container and show the next one
             questionContainers[index].style.display = 'none';
             questionContainers[index + 1].style.display = 'block';
         });
     });
 
+    // Get all next buttons and the reflection button container
     const nextButtons = document.querySelectorAll('.next-question');
     const reflectButtonContainer = document.getElementById('conditionalElement');
 
@@ -46,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             reflectionModal.show();
         });
 
+        // Handle reflection submission
         const reflectionButton = document.getElementById("submit-reflection");
         reflectionButton.addEventListener('click', () => {
             $("#modal-go-mission").modal('show')
@@ -53,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 })
 
+/**
+ * Add an event listener to the "Continue" button to navigate to the next page.
+ */
 document.getElementById('button-continue').addEventListener('click', function () {
     window.location.href = '../mission-game-component/mission-game.html';
 })
