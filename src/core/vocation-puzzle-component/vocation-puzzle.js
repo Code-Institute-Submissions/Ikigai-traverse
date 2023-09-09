@@ -117,6 +117,7 @@ window.onload = function () {
 
 // Open the reflection modal
 const openModalButton = document.getElementById("open-reflection-modal");
+openModalButton.disabled = true;
 const reflectionModal = new bootstrap.Modal(document.getElementById("reflectionModal"));
 
 openModalButton.addEventListener("click", () => {
