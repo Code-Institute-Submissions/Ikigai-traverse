@@ -1,11 +1,14 @@
+/* Set margin for the #columns-container */
 #columns-container {
     margin-top: 20px;
 }
 
+/* Center-align h2 headings */
 h2 {
     text-align: center;
 }
 
+/* Styling for individual columns */
 .column {
     width: 30%;
     padding: 10px;
@@ -14,6 +17,7 @@ h2 {
     border-radius: 5px;
 }
 
+/* Adjust the spacing for #actions-container */
 #actions-container {
     margin-top: 20px;
     flex-wrap: wrap;
@@ -26,6 +30,7 @@ h2 {
     background-color: #f0f0f0;
     border-radius: 5px;
     cursor: pointer;
+    /* Change the cursor to a pointer on hover to indicate interactivity */
     margin-bottom: 10px;
     font-family: cursive;
 }
@@ -35,6 +40,16 @@ h2 {
     user-select: none;
 }
 
+/* Styling for #dynamic-content */
+#dynamic-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+/* Styling for list elements */
 .list {
     border: 2px solid #d5b2d2;
     background-color: #f9f9f9;
@@ -44,6 +59,7 @@ h2 {
     padding: 10px;
 }
 
+/* Styling for placeholder elements */
 .placeholder {
     background-color: white;
     border: 2px dashed #aaa;
@@ -51,10 +67,13 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Styling for elements with the 'dragging' class */
 .dragging {
     opacity: 0.5;
 }
-.button-reflect{
+
+/* Styling for .button-reflect elements */
+.button-reflect {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -62,11 +81,8 @@ h2 {
     justify-content: flex-end;
 }
 
-textarea{
-    width: 465px;
-}
-
-label{
+/* Styling for label elements */
+label {
     display: grid;
     align-content: space-between;
     justify-content: center;
@@ -74,15 +90,40 @@ label{
     justify-items: center;
 }
 
-span{
-    font-weight:bold
+/* Styling for span elements */
+span {
+    font-weight: bold
 }
 
+/* Styling for .modal elements */
 .modal {
     background-color: rgb(255 192 203 / 71%);
 }
 
+/* Styling for .modal-image elements */
 .modal-image {
     width: 100%;
     height: auto;
+}
+
+/* Media query for screens up to 720px wide */
+@media (max-width: 700px) {
+
+    /* Adjustments for small screens here */
+    h3 {
+        font-size: 12px !important;
+    }
+
+    #columns-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .action {
+        width: fit-content;
+    }
 }
