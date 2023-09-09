@@ -69,7 +69,7 @@ function handleActionDrag(event) {
 }
 
 function updateReflectionSections() {
-    const somewhatActionsSpan = document.getElementById("somewhat-actions");
+    const somewhatActionsSpan = document.getElementById("somewhat-impactful-actions");
     somewhatActionsSpan.textContent = selectedActions["Somewhat Impactful"].join(", ");
 
     const mostImpactfulActionsSpan = document.getElementById("most-impactful-actions");
