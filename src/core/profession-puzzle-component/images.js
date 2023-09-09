@@ -4,11 +4,11 @@ export const IMAGES = [
     "crafting.jpg",
     "design.jpg",
     "e-book-layout-design-draft-graphic.jpg",
-    "fourniture_assembly+.jpg",
+    "fourniture-assembly.jpg",
     "management.jpg",
     "music.jpg",
     "painting.jpg",
     "puzzle.jpg",
-    "sport_playing.jpg",
+    "sport-playing.jpg",
     "voulanteers.jpg"
 ];
