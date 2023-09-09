@@ -1,144 +1,172 @@
+/* Set background color, spacing, and overall layout for the body */
 body {
     background-color: rgb(255 255 255 / -5%);
+    /* Semi-transparent white background */
     margin: 0;
     padding-top: 10vh;
-    /* height of header */
+    /* Add space at the top equal to the height of the header */
     padding-bottom: 10vh;
-    /* height of footer */
+    /* Add space at the bottom equal to the height of the footer */
     min-height: 100vh;
+    /* Ensure a minimum height of the viewport */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: clamp(16px, 4vw, 24px);
-}
-
-#main-content {
-    background-image: url('../../assets/images/magenta-nature-mystical-landscape.jpg');
-    display: flex;
+    /* Use flexbox for layout */
     flex-direction: column;
     /* Stack children vertically */
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* Set a minimum height to take up at least the viewport height */
-    width: 100%;
+    /* Vertically center content */
+    font-size: clamp(16px, 4vw, 24px);
+    /* Responsive font size */
 }
 
+/* Style for the main content container */
+#main-content {
+    background-image: url('../../assets/images/magenta-nature-mystical-landscape.jpg');
+    /* Background image */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: center;
+    /* Vertically center content */
+    align-items: center;
+    /* Center content horizontally */
+    min-height: 100vh;
+    /* Ensure a minimum height of the viewport */
+    width: 100%;
+    /* Take up the full width of the viewport */
+}
+
+/* Style for the dynamic content container */
 #dynamic-content {
     text-align: center;
+    /* Center-align text content */
     width: inherit;
+    /* Inherit width from the parent container */
     padding: 20px;
+    /* Add padding */
     background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent white background */
     border-radius: 10px;
+    /* Rounded corners */
     padding: 10px;
+    /* Additional padding */
     border: 1px solid black;
+    /* Border */
     box-sizing: border-box;
-    /* Include padding and border in the width calculation */
+    /* Include padding and border in width calculation */
+    box-shadow: 5px 5px 10px color(srgb 0.05 0.79 0.94 / 0.22);
+    /* Box shadow */
 }
 
-.dynamic-content-home{
-    width:fit-content !important;
+/* Style for home page dynamic content */
+.dynamic-content-home {
+    width: fit-content !important;
+    /* Adjust width to fit content */
 }
 
+/* Override font size for specific elements */
 .form-control,
 div,
 textarea,
 select,
 button,
 p {
-    /* the font-size will be taken from the root (which is affected by the clamp() on the body) */
     font-size: 0.8rem !important;
-    
+    /* Set font size for specified elements */
 }
 
 h1,
 h2,
 .modal-title {
-    font-size: x-large !important; 
+    font-size: x-large !important;
+    /* Set font size for headers and modal titles */
 }
 
+/* Style for text area */
 textarea {
     width: 94%;
+    /* Set textarea width */
 }
 
-
+/* Style for the header */
 #header {
     width: 100%;
+    /* Set header width */
 }
 
 header {
     position: fixed;
+    /* Fixed header position */
     top: 0;
     width: 100%;
 }
 
+/* Center-align headers */
 h2,
 h3,
 h4 {
     text-align: center;
 }
 
+/* Override font family for specific elements */
 .modal-title,
 h2,
 h4,
 h3 {
     font-family: monospace !important;
+    /* Set font family for specified elements */
 }
 
+/* Style for modal */
 .modal {
     background-color: rgb(255 192 203 / 71%);
+    /* Semi-transparent background for modal */
 }
 
+/* Style for informational boxes and text content */
 .box-info {
     display: flex;
     flex-direction: column;
     line-height: 1.5;
     margin: 0 auto;
     max-width: 800px;
+    /* Limit maximum width */
 }
 
+/* Style for paragraphs within informational boxes */
 .box-info p {
     text-align: justify;
+    /* Justify text alignment */
     margin: 0;
     /* Reset default margin for paragraphs */
 }
 
+/* Override font family for specific elements */
 .box-info,
 ul,
 li {
     font-family: 'Kosugi Maru', sans-serif;
+    /* Set font family */
 }
 
+/* Style for the header and footer */
 header,
 footer {
     background-color: rgba(255, 182, 193, 1.8);
+    /* Background color for header and footer */
     height: 10vh;
+    /* Set height of header and footer */
     z-index: 1000;
-
+    /* Set stacking order */
 }
 
+/* Override font family for paragraphs */
 p {
     font-family: 'Kosugi Maru', sans-serif;
 }
 
-/* #main-content {
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 20vh);
-}
-
-#dynamic-content {
-
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-} */
-
+/* Style for discover box button */
 .btn-discover-box {
     display: flex;
     flex-direction: row;
@@ -147,8 +175,10 @@ p {
     align-items: stretch;
     justify-content: flex-end;
     margin-top: 0.5rem;
+    /* Add margin at the top */
 }
 
+/* Margin for headers */
 h1,
 h2,
 h3,
@@ -156,31 +186,41 @@ h4,
 h5,
 h6 {
     margin-bottom: 1.5rem;
+    /* Add margin at the bottom of headers */
 }
 
+/* Style for primary button */
 .btn-primary {
     --bs-btn-bg: #d63384 !important;
+    /* Set button background color */
     --bs-btn-hover-bg: #0d6efd40 !important;
+    /* Set button hover background color */
     background-color: #d63384;
+    /* Background color */
 }
 
+/* Hide text content initially */
 #text-content {
     display: none;
 }
 
+/* Style for footer */
 footer {
     position: fixed;
+    /* Fixed footer position */
     bottom: 0;
     width: 100%;
 }
 
+/* Style for footer container */
 #footer {
     width: 100%;
 }
 
-/* For tablets in portrait mode */
+/* Media query for tablets in portrait mode */
 @media (min-width: 600px) {
     body {
         font-size: 16px;
+        /* Increase font size for tablets */
     }
 }
