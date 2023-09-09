@@ -59,7 +59,6 @@ function cardClicked(cardElement, cardData) {
         }
     }
     if (score === (cards.length / 2)) {
-        console.log("here denabled", (cards.length / 2))
         openModalButton.removeAttribute('disabled');
         stopTimer();
     }

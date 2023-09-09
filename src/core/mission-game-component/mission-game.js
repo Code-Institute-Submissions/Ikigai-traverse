@@ -63,7 +63,6 @@ function handleActionDrag(event) {
     } else if (targetColumnId === "least-impactful") {
         selectedActions["Low Impact"].push(selectedAction);
     }
-    console.log("selected Actions are: ", selectedActions)
 
     // Update the reflection sections
     updateReflectionSections();
