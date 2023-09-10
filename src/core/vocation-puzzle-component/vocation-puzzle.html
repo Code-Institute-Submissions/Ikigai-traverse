@@ -1,122 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ikigai Vocation Memory Game: Test your memory as you match professions with their respective salaries. Gain insights into potential earnings while challenging your cognitive skills in this captivating game.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ikigai Vocation Memory Game: Test your memory as you match professions with their respective salaries. Gain insights into potential earnings while challenging your cognitive skills in this captivating game."
+    />
 
     <title>Ikigai Traverse Game - Problems and Solutions</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-    <link rel="stylesheet" href="vocation-puzzle.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="vocation-puzzle.css" />
+  </head>
 
-<body class="d-flex align-items-center justify-content-center min-vh-100">
+  <body class="d-flex align-items-center justify-content-center min-vh-100">
     <!-- Header -->
     <div id="header"></div>
 
     <!-- Content -->
-    <main id="main-content" style="background-image: url('../../assets/images/magenta-nature-mystical-landscape.webp')">
-        <div id="dynamic-content">
-            <h2>Discover what you can get paid for</h2>
-            <p>Match professions with their average salaries. Consider the financial potential of each career path and
-                discover what you could get paid for.</p>
+    <main
+      id="main-content"
+      style="
+        background-image: url(&quot;../../assets/images/magenta-nature-mystical-landscape.webp&quot;);
+      "
+    >
+      <div id="dynamic-content">
+        <h2>Discover what you can get paid for</h2>
+        <p>
+          Match professions with their average salaries. Consider the financial
+          potential of each career path and discover what you could get paid
+          for.
+        </p>
 
-            <!-- Memory Game Board -->
-            <div id="game-board">
-                <!-- the board will be dynamically populated with the card elements -->
-            </div>
-
-            <!-- Game Stats -->
-            <div id="game-stats">
-                <p><span id="timer">00:00</span></p> <!-- Timer display -->
-                <p>Score: <span id="score">0</span></p> <!-- Score display -->
-            </div>
-
-            <!-- Congratulations Message -->
-            <div id="congratsMessage" class="congrats-message">
-                Congratulations! You've found a match!
-            </div>
-
-            <div class="button-reflect">
-                <!-- Button to open the reflection modal -->
-                <button id="open-reflection-modal" class="btn btn-primary">Open Reflection</button>
-            </div>
+        <!-- Memory Game Board -->
+        <div id="game-board">
+          <!-- the board will be dynamically populated with the card elements -->
         </div>
+
+        <!-- Game Stats -->
+        <div id="game-stats">
+          <p><span id="timer">00:00</span></p>
+          <!-- Timer display -->
+          <p>Score: <span id="score">0</span></p>
+          <!-- Score display -->
+        </div>
+
+        <!-- Congratulations Message -->
+        <div id="congratsMessage" class="congrats-message">
+          Congratulations! You've found a match!
+        </div>
+
+        <div class="button-reflect">
+          <!-- Button to open the reflection modal -->
+          <button id="open-reflection-modal" class="btn btn-primary">
+            Open Reflection
+          </button>
+        </div>
+      </div>
     </main>
 
-
     <!-- Reflection Modal -->
-    <div class="modal fade" id="reflectionModal" tabindex="-1" aria-labelledby="reflectionModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div
+      class="modal fade"
+      id="reflectionModal"
+      tabindex="-1"
+      aria-labelledby="reflectionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="reflectionModalLabel">Reflection</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Reflect on Your Game Experience: Career and Earnings:</p>
-                <label for="question1">What was your strategy for matching the vocation with its corresponding salary?</label>
-                <textarea id="question1" rows="4"></textarea>
-                <label for="question2">How did you approach the game when it started, and how did your strategy evolve as you played?</label>
-                <textarea id="question2" rows="4"></textarea>
-                <label for="question3">How might the insights gained from this game influence your real-life career decisions?</label>
-                <textarea id="question3" rows="4"></textarea>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Exit the game</button>
-                <button id="submit-reflection" class="btn btn-primary">Submit Reflection</button>
-            </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="reflectionModalLabel">Reflection</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Reflect on Your Game Experience: Career and Earnings:</p>
+            <label for="question1"
+              >What was your strategy for matching the vocation with its
+              corresponding salary?</label
+            >
+            <textarea id="question1" rows="4"></textarea>
+            <label for="question2"
+              >How did you approach the game when it started, and how did your
+              strategy evolve as you played?</label
+            >
+            <textarea id="question2" rows="4"></textarea>
+            <label for="question3"
+              >How might the insights gained from this game influence your
+              real-life career decisions?</label
+            >
+            <textarea id="question3" rows="4"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Exit the game
+            </button>
+            <button id="submit-reflection" class="btn btn-primary">
+              Submit Reflection
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
     <div id="footer"></div>
 
     <!-- Message Popup -->
-<div id="completion-popup" class="modal">
-    <div class="modal-dialog modal-dialog-centered">
+    <div id="completion-popup" class="modal">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Congratulations!</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Congratulations on Completing Your IKIGAI Game and Reflection! 🎉</p>
-            </div>
+          <div class="modal-header">
+            <h5 class="modal-title">Congratulations!</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Congratulations on Completing Your IKIGAI Game and Reflection! 🎉
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
     <!-- Toast Success Notification -->
     <div class="position-fixed top-0 end-0 p-3" style="z-index: 11000">
-        <div id="toastSuccess" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">Success</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-                Congratulations! You have found a match!
-            </div>
+      <div
+        id="toastSuccess"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <strong class="me-auto">Success</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
         </div>
+        <div class="toast-body">Congratulations! You have found a match!</div>
+      </div>
     </div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
     <script>
-        $(function () {
-            $("#header").load("../../shared/header.html");
-            $("#footer").load("../../shared/footer.html");
-        });
+      $(function () {
+        $("#header").load("../../shared/header.html");
+        $("#footer").load("../../shared/footer.html");
+      });
     </script>
     <script type="module" src="vocation-puzzle.js"></script>
-</body>
-
+  </body>
 </html>

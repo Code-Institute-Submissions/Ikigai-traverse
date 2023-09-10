@@ -1,164 +1,164 @@
 /* Styling for .card elements */
 .card {
-    /* Ensure that box-sizing includes borders and padding in width calculation */
-    box-sizing: border-box;
-    
-    /* Set a calculated width to maintain a 7:9 aspect ratio based on viewport height (vh) */
-    width: calc(18vh * 0.77777778);
-    
-    /* Maintain a fixed height to preserve the aspect ratio */
-    height: 18vh;
-    
-    /* Add margin and a 1px solid black border around the card */
-    margin: 5px;
-    border: 1px solid black;
-    
-    /* Display the cards as inline-block elements */
-    display: inline-block;
-    
-    /* Add additional margin for spacing */
-    margin: 10px;
-    
-    /* Change the cursor to a pointer to indicate interactivity */
-    cursor: pointer;
-    
-    /* Set the background color for the card */
-    background-color: #8b008b8f;
+  /* Ensure that box-sizing includes borders and padding in width calculation */
+  box-sizing: border-box;
+
+  /* Set a calculated width to maintain a 7:9 aspect ratio based on viewport height (vh) */
+  width: calc(18vh * 0.77777778);
+
+  /* Maintain a fixed height to preserve the aspect ratio */
+  height: 18vh;
+
+  /* Add margin and a 1px solid black border around the card */
+  margin: 5px;
+  border: 1px solid black;
+
+  /* Display the cards as inline-block elements */
+  display: inline-block;
+
+  /* Add additional margin for spacing */
+  margin: 10px;
+
+  /* Change the cursor to a pointer to indicate interactivity */
+  cursor: pointer;
+
+  /* Set the background color for the card */
+  background-color: #8b008b8f;
 }
 
 /* Styling for .card elements when flipped */
 .card.flipped {
-    /* Change the background color when the card is flipped */
-    background-color: white;
-    
-    /* Change the display to flex and adjust content alignment */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    
-    /* Apply a cursive font family and center-align text content */
-    font-family: cursive;
-    justify-content: center;
-    text-align: center;
+  /* Change the background color when the card is flipped */
+  background-color: white;
+
+  /* Change the display to flex and adjust content alignment */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+
+  /* Apply a cursive font family and center-align text content */
+  font-family: cursive;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Styling for the #game-board element */
 #game-board {
-    /* Display the game board as a flex container with specific alignment */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: center;
-    align-items: center;
+  /* Display the game board as a flex container with specific alignment */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Styling for the #game-stats element */
 #game-stats {
-    /* Display game statistics as a flex container with column layout */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
-    /* Adjust alignment and justify statistics to the bottom */
-    align-content: end;
-    justify-content: flex-end;
-    align-items: end;
-    
-    /* Apply a custom text color using a CSS variable */
-    color: var(--bs-danger);
+  /* Display game statistics as a flex container with column layout */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  /* Adjust alignment and justify statistics to the bottom */
+  align-content: end;
+  justify-content: flex-end;
+  align-items: end;
+
+  /* Apply a custom text color using a CSS variable */
+  color: var(--bs-danger);
 }
 
 /* Styling for the #dynamic-content element */
 #dynamic-content {
-    /* Limit the maximum width of dynamic content to 58% */
-    max-width: 58%;
+  /* Limit the maximum width of dynamic content to 58% */
+  max-width: 58%;
 }
 
 /* Styling for the congratulatory message */
 .congrats-message {
-    /* Position the message in the center of the viewport */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    /* Add padding, background color, and rounded corners */
-    padding: 15px;
-    background-color: #ffd700;
-    color: white;
-    border-radius: 10px;
-    
-    /* Apply a subtle box shadow for depth */
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-    
-    /* Initially hide the message */
-    display: none;
-    
-    /* Set a high z-index to ensure it appears above other content */
-    z-index: 1000;
+  /* Position the message in the center of the viewport */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Add padding, background color, and rounded corners */
+  padding: 15px;
+  background-color: #ffd700;
+  color: white;
+  border-radius: 10px;
+
+  /* Apply a subtle box shadow for depth */
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+
+  /* Initially hide the message */
+  display: none;
+
+  /* Set a high z-index to ensure it appears above other content */
+  z-index: 1000;
 }
 
 /* Styling for the success toast */
 #toastSuccess {
-    /* Set the background color and add a border to the success toast */
-    background-color: #9ec5fe;
-    border: 1px solid #ffd700;
+  /* Set the background color and add a border to the success toast */
+  background-color: #9ec5fe;
+  border: 1px solid #ffd700;
 }
 
 /* Styling for elements with class .button-reflect */
 .button-reflect {
-    /* Initially hide the reflection container */
-    display: flex;
-    
-    /* Create a row layout and stretch content */
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: stretch;
-    
-    /* Align the reflection container to the right */
-    justify-content: flex-end;
+  /* Initially hide the reflection container */
+  display: flex;
+
+  /* Create a row layout and stretch content */
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+
+  /* Align the reflection container to the right */
+  justify-content: flex-end;
 }
 
 /* Styling for label elements */
 label {
-    /* Create a grid layout and adjust alignment and spacing */
-    display: grid;
-    align-content: space-between;
-    justify-content: center;
-    align-items: baseline;
+  /* Create a grid layout and adjust alignment and spacing */
+  display: grid;
+  align-content: space-between;
+  justify-content: center;
+  align-items: baseline;
 }
 
 /* Styling for span elements */
 span {
-    /* Apply a bold font weight to span elements */
-    font-weight: bold;
+  /* Apply a bold font weight to span elements */
+  font-weight: bold;
 }
 
 /* Styling for elements with class .modal */
 .modal {
-    /* Set the background color for modal elements with a semi-transparent pink shade */
-    background-color: rgb(255 192 203 / 71%);
+  /* Set the background color for modal elements with a semi-transparent pink shade */
+  background-color: rgb(255 192 203 / 71%);
 }
 
 /* Media query for screens with a maximum width of 600px */
 @media (max-width: 600px) {
-    /* Apply a grid layout to the #game-board element with 3 equal columns */
-    #game-board {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-    
-    /* Adjust the width of .card elements to occupy the full width */
-    .card {
-        width: calc(100% - 10px);
-    }
-    
-    /* Limit the maximum width of #dynamic-content to 75% */
-    #dynamic-content {
-        max-width: 75% !important;
-    }
+  /* Apply a grid layout to the #game-board element with 3 equal columns */
+  #game-board {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* Adjust the width of .card elements to occupy the full width */
+  .card {
+    width: calc(100% - 10px);
+  }
+
+  /* Limit the maximum width of #dynamic-content to 75% */
+  #dynamic-content {
+    max-width: 75% !important;
+  }
 }
 
 /* 
@@ -169,20 +169,20 @@ span {
   - Limit content width to improve readability.
 */
 
-@media (min-width: 601px) and (max-width: 1200px){
-    /* Apply a grid layout to the #game-board element with 3 equal columns */
-    #game-board {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-    
-    /* Adjust the width of .card elements to occupy the full width */
-    .card {
-        width: calc(100% - 10px);
-    }
-    
-    /* Limit the maximum width of #dynamic-content to 75% */
-    #dynamic-content {
-        max-width: 75% !important;
-    }
+@media (min-width: 601px) and (max-width: 1200px) {
+  /* Apply a grid layout to the #game-board element with 3 equal columns */
+  #game-board {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* Adjust the width of .card elements to occupy the full width */
+  .card {
+    width: calc(100% - 10px);
+  }
+
+  /* Limit the maximum width of #dynamic-content to 75% */
+  #dynamic-content {
+    max-width: 75% !important;
+  }
 }

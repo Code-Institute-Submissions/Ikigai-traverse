@@ -1,67 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ikigai Love Quiz: Dive deep into the realms of your passions and interests. Through interactive questions, discover what truly ignites your spirit and brings joy to your life.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ikigai Love Quiz: Dive deep into the realms of your passions and interests. Through interactive questions, discover what truly ignites your spirit and brings joy to your life."
+    />
 
     <title>Ikigai Traverse Game - Love Quiz</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="love-quiz.css">
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="love-quiz.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
 
-<body class="d-flex align-items-center justify-content-center min-vh-100">
+  <body class="d-flex align-items-center justify-content-center min-vh-100">
     <!-- Header -->
     <div id="header"></div>
 
     <!-- Content -->
-    <main id="main-content" style="background-image: url('../../assets/images/magenta-nature-mystical-landscape.webp')">
-
-        <div id="dynamic-content">
-            <h2>Find What do you Love Quiz</h2>
-            <div id="content-area">
-                <form id="love-quiz">
-                    <div class="question-container" id="question1-container">
-                        <label for="question1" class="form-label" hidden>Question 1</label>
-                        <input type="text" class="form-control" id="question1"
-                            placeholder="What activity makes you lose track of time?">
-                        <div class="next-button-container">
-                            <button type="button" class="btn btn-primary next-question">Next</button>
-                        </div>
-                    </div>
-                    <div class="question-container" id="question2-container" style="display: none;">
-                        <label for="question2" class="form-label" hidden>Question 2</label>
-                        <input type="text" class="form-control" id="question2"
-                            placeholder="What did you love to do as a child?">
-                        <div class="next-button-container">
-                            <button type="button" class="btn btn-primary next-question">Next</button>
-                        </div>
-                    </div>
-                    <div class="question-container" id="question3-container" style="display: none;">
-                        <label for="question3" class="form-label" hidden>Question 3</label>
-                        <input type="text" class="form-control" id="question3"
-                            placeholder="What activity would you choose to do in your free time?">
-                        <div class="next-button-container">
-                            <button type="button" class="btn btn-primary next-question">Next</button>
-
-                        </div>
-                    </div>
-                    <div class="question-container" id="question4-container" style="display: none;">
-                        <label for="question4" class="form-label" hidden>Last Question</label>
-                        <input type="text" class="form-control" id="question4" placeholder="What is something you've always wanted to learn?">
-
-                    </div>
-                </form>
-                <div id="conditionalElement" class="button-reflect">
-                    <!-- Button to open the reflection modal -->
-                    <button id="open-reflection-modal" class="btn btn-primary">Open Reflection</button>
-                </div>
+    <main
+      id="main-content"
+      style="
+        background-image: url(&quot;../../assets/images/magenta-nature-mystical-landscape.webp&quot;);
+      "
+    >
+      <div id="dynamic-content">
+        <h2>Find What do you Love Quiz</h2>
+        <div id="content-area">
+          <form id="love-quiz">
+            <div class="question-container" id="question1-container">
+              <label for="question1" class="form-label" hidden
+                >Question 1</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="question1"
+                placeholder="What activity makes you lose track of time?"
+              />
+              <div class="next-button-container">
+                <button type="button" class="btn btn-primary next-question">
+                  Next
+                </button>
+              </div>
             </div>
-
+            <div
+              class="question-container"
+              id="question2-container"
+              style="display: none"
+            >
+              <label for="question2" class="form-label" hidden
+                >Question 2</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="question2"
+                placeholder="What did you love to do as a child?"
+              />
+              <div class="next-button-container">
+                <button type="button" class="btn btn-primary next-question">
+                  Next
+                </button>
+              </div>
+            </div>
+            <div
+              class="question-container"
+              id="question3-container"
+              style="display: none"
+            >
+              <label for="question3" class="form-label" hidden
+                >Question 3</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="question3"
+                placeholder="What activity would you choose to do in your free time?"
+              />
+              <div class="next-button-container">
+                <button type="button" class="btn btn-primary next-question">
+                  Next
+                </button>
+              </div>
+            </div>
+            <div
+              class="question-container"
+              id="question4-container"
+              style="display: none"
+            >
+              <label for="question4" class="form-label" hidden
+                >Last Question</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="question4"
+                placeholder="What is something you've always wanted to learn?"
+              />
+            </div>
+          </form>
+          <div id="conditionalElement" class="button-reflect">
+            <!-- Button to open the reflection modal -->
+            <button id="open-reflection-modal" class="btn btn-primary">
+              Open Reflection
+            </button>
+          </div>
         </div>
-
+      </div>
     </main>
 
     <!-- Footer -->
@@ -69,69 +119,114 @@
 
     <!-- Modal -->
     <div id="modal-go-mission" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-dialog-centered">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">
-                        Ready for finding your mission?</h4>
-                    <button type="button" class="close" data-bs-dismiss="modal">×</button>
-                </div>
-                <div class="modal-body">
-                    <p><img src="../../assets/images/transtition-modal-image.webp" alt="Character" class="modal-image"></p>
-
-                </div>
-                <div class="modal-footer">
-                    <button id="button-continue" type="button" class="btn btn-primary" data-bs-dismiss="modal">Continue</button>
-                    <button id="button-exit" type="button" class="btn btn-default" data-bs-dismiss="modal">Exit</button>
-                </div>
-            </div>
-
+      <div class="modal-dialog modal-dialog-centered">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Ready for finding your mission?</h4>
+            <button type="button" class="close" data-bs-dismiss="modal">
+              ×
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <img
+                src="../../assets/images/transtition-modal-image.webp"
+                alt="Character"
+                class="modal-image"
+              />
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="button-continue"
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Continue
+            </button>
+            <button
+              id="button-exit"
+              type="button"
+              class="btn btn-default"
+              data-bs-dismiss="modal"
+            >
+              Exit
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
-        <!-- Reflection Modal -->
-        <div class="modal fade" id="reflectionModal" tabindex="-1" aria-labelledby="reflectionModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="reflectionModalLabel">Reflection</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Take a moment to reflect on your choices and their impact:</p>
-                    <label for="question1-reflection">Reflecting on your childhood answer, do you still find joy in that activity today? If not, what changed?</label>
-                    <textarea id="question1-reflection" rows="4"></textarea>
-                    <label for="question2-reflection">Thinking about the activities that make time fly for you, why do you think you become so engrossed in them?</label>
-                    <textarea id="question2-reflection" rows="4"></textarea>
-                    <label for="question3-reflection">Do you believe it's important to have a career or job that aligns with these passions? Why or why not?</label>
-                    <textarea id="question3-reflection" rows="4"></textarea>
-                    <label for="question4-reflection">How does engaging in your favorite leisure activities impact your mental and emotional well-being?</label>
-                    <textarea id="question4-reflection" rows="4"></textarea>
-                    <label for="question5-reflection">Based on your answers, do you feel you're living authentically, in alignment with your true passions and interests?</label>
-                    <textarea id="question5-reflection" rows="4"></textarea>
-    
-                </div>
-                <div class="modal-footer">
-                    <button id="submit-reflection" class="btn btn-primary"  data-bs-dismiss="modal">Submit Reflection</button>
-                </div>
-            </div>
+    <!-- Reflection Modal -->
+    <div
+      class="modal fade"
+      id="reflectionModal"
+      tabindex="-1"
+      aria-labelledby="reflectionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reflectionModalLabel">Reflection</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Take a moment to reflect on your choices and their impact:</p>
+            <label for="question1-reflection"
+              >Reflecting on your childhood answer, do you still find joy in
+              that activity today? If not, what changed?</label
+            >
+            <textarea id="question1-reflection" rows="4"></textarea>
+            <label for="question2-reflection"
+              >Thinking about the activities that make time fly for you, why do
+              you think you become so engrossed in them?</label
+            >
+            <textarea id="question2-reflection" rows="4"></textarea>
+            <label for="question3-reflection"
+              >Do you believe it's important to have a career or job that aligns
+              with these passions? Why or why not?</label
+            >
+            <textarea id="question3-reflection" rows="4"></textarea>
+            <label for="question4-reflection"
+              >How does engaging in your favorite leisure activities impact your
+              mental and emotional well-being?</label
+            >
+            <textarea id="question4-reflection" rows="4"></textarea>
+            <label for="question5-reflection"
+              >Based on your answers, do you feel you're living authentically,
+              in alignment with your true passions and interests?</label
+            >
+            <textarea id="question5-reflection" rows="4"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="submit-reflection"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Submit Reflection
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(function () {
-            $("#header").load("../../shared/header.html");
-            $("#footer").load("../../shared/footer.html");
-        });
+      $(function () {
+        $("#header").load("../../shared/header.html");
+        $("#footer").load("../../shared/footer.html");
+      });
     </script>
     <script src="love-quiz.js"></script>
-</body>
-
+  </body>
 </html>
