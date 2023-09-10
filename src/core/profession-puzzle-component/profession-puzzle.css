@@ -87,7 +87,6 @@ label {
     align-content: space-between;
     justify-content: center;
     align-items: baseline;
-    justify-items: center;
 }
 
 /* Styling for span elements */
@@ -99,7 +98,7 @@ span {
 /* Styling for modal elements */
 .modal {
     /* Apply a semi-transparent pink background color to modal elements */
-    background-color: rgb(255 192 203 / 71%);
+    background-color: rgba(255, 192, 203, 0.71);
 }
 
 /* Styling for modal images */
