@@ -6,7 +6,7 @@ The Ikigai Traverse Game is an engaging and instructive puzzle game for the web 
 
 Ikigai Traverse seeks to provide players with a pleasant and engaging approach to explore and think about these four crucial parts of their lives and how to find the junction between them. The goal of the game is to promote self-discovery, personal development, and a deeper comprehension of one's interests, skills, and possible contributions to society.
 
-I want also to tell the player that I wish him a nice traverse and I wish that after the game he will be able to unlock his own IKIGAI.
+To every player who embarks on this journey with the Ikigai Traverse Game, I wish you a pleasant traverse. May you unlock and embrace your unique IKIGAI by the end.
 
 ![Responsive Design Check Screenshot](src/assets/screenshots/responsive_design-check.png)
 
@@ -137,6 +137,15 @@ The Ikigai Traverse Game was designed to serve as a link between learning and fu
 
 These features are intended to provide a fun and instructive experience as you explore the various facets of IKIGAI.
 
+### Completion Acknowledgment
+- Upon submitting the final reflection in the vocation game, players are greeted with a congratulatory message, celebrating their accomplishment in completing their IKIGAI journey and reflections.
+- Players can close this acknowledgment and opt to exit the game.
+
+![Completion Message](src/assets/screenshots/end-of-the-game.png)
+
+- Clicking "Exit the game" will redirect players back to the home page, allowing them to revisit any section or explore more about IKIGAI.
+
+![Exit Game](src/assets/screenshots/exit-submit-reflection-area.png)
 ## Testing
 
 During the development of the Ikigai Traverse Game, thorough testing was paramount to ensure an optimal user experience. Here's a summary of the testing methodologies applied:
