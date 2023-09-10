@@ -158,6 +158,32 @@ span {
     
     /* Limit the maximum width of #dynamic-content to 75% */
     #dynamic-content {
-        max-width: 75%;
+        max-width: 75% !important;
+    }
+}
+
+/* 
+  Styles for Medium Devices:
+  Targeting screen widths between 601px and 1200px
+  - Set a 3-column grid for the game board.
+  - Adjust card elements to take up almost full width.
+  - Limit content width to improve readability.
+*/
+
+@media (min-width: 601px) and (max-width: 1200px){
+    /* Apply a grid layout to the #game-board element with 3 equal columns */
+    #game-board {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    /* Adjust the width of .card elements to occupy the full width */
+    .card {
+        width: calc(100% - 10px);
+    }
+    
+    /* Limit the maximum width of #dynamic-content to 75% */
+    #dynamic-content {
+        max-width: 75% !important;
     }
 }
