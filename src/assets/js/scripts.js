@@ -4,4 +4,5 @@ $(document).ready(function () {
     $(document).on('click', '#play-button', function () {
         window.location.href = 'src/core/love-quiz-component/love-quiz.html';
     });
+    console.log("test")
 });
