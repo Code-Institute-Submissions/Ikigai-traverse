@@ -10,29 +10,28 @@ h2 {
 
 /* Styling for individual columns */
 .column {
-    width: 30%;
-    padding: 10px;
-    border: 2px solid #ddd;
     background-color: #f9f9f9;
+    border: 2px solid #ddd;
     border-radius: 5px;
+    padding: 10px;
+    width: 30%;
 }
 
 /* Adjust the spacing for #actions-container */
 #actions-container {
-    margin-top: 20px;
     flex-wrap: wrap;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .action {
-    padding: 10px;
-    border: 1px solid #ddd;
     background-color: #f0f0f0;
+    border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
-    /* Change the cursor to a pointer on hover to indicate interactivity */
-    margin-bottom: 10px;
     font-family: cursive;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 /* Apply to the elements that should not be selected during drag */
@@ -42,20 +41,20 @@ h2 {
 
 /* Styling for #dynamic-content */
 #dynamic-content {
+    align-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
 }
 
 /* Styling for list elements */
 .list {
-    border: 2px solid #d5b2d2;
     background-color: #f9f9f9;
+    border: 2px solid #d5b2d2;
     border-radius: 5px;
-    min-height: 100px;
     margin-bottom: 10px;
+    min-height: 100px;
     padding: 10px;
 }
 
@@ -63,8 +62,8 @@ h2 {
 .placeholder {
     background-color: white;
     border: 2px dashed #aaa;
-    min-height: 50px;
     margin-bottom: 10px;
+    min-height: 50px;
 }
 
 /* Styling for elements with the 'dragging' class */
@@ -74,36 +73,35 @@ h2 {
 
 /* Styling for .button-reflect elements */
 .button-reflect {
+    align-content: stretch;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: stretch;
     justify-content: flex-end;
 }
 
 /* Styling for label elements */
 label {
-    display: grid;
     align-content: space-between;
-    justify-content: center;
     align-items: baseline;
-    justify-items: center;
+    display: grid;
+    justify-content: center;
 }
 
 /* Styling for span elements */
 span {
-    font-weight: bold
+    font-weight: bold;
 }
 
 /* Styling for .modal elements */
 .modal {
-    background-color: rgb(255 192 203 / 71%);
+    background-color: rgba(255, 192, 203, 0.71);
 }
 
 /* Styling for .modal-image elements */
 .modal-image {
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 /* Media query for screens up to 720px wide */
@@ -114,7 +112,7 @@ span {
         font-size: 12px !important;
     }
 
-    #columns-container {
+    .column-box{
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
     }
