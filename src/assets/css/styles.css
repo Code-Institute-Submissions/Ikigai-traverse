@@ -224,3 +224,12 @@ footer {
         /* Increase font size for tablets */
     }
 }
+
+
+/* Responsive design: Reduce font size for screens smaller than 320px */
+@media (max-width: 320px) {
+    body,
+    h1 {
+        font-size: small !important;
+    }
+}
